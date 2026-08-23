@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Monika Verma - Data Analytics portfolio showcasing analytics, dashboards, SQL, automation, and consulting projects." />
+  <title>Monika Verma | Data Analytics Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="Monika Verma home">
+        <span class="brand-mark">MV</span>
+        <span>
+          <strong>Monika Verma</strong>
+          <small>Data. Insights. Growth.</small>
+        </span>
+      </a>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btn btn-primary nav-cta" href="#contact">Let’s Connect <span>→</span></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">DATA ANALYTICS • AUTOMATION • BUSINESS INSIGHTS</p>
+          <h1>Turning complex data into <span>clear, actionable decisions.</span></h1>
+          <p class="hero-text">I’m Monika Verma, a Data Analyst focused on SQL, dashboards, reporting automation and practical analytics that help teams understand performance and make better decisions.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">View My Projects</a>
+            <a class="btn btn-secondary" href="#contact">Work With Me</a>
+          </div>
+          <div class="hero-points">
+            <div><span>✓</span><strong>Analytics</strong><small>Insight-driven reporting</small></div>
+            <div><span>✓</span><strong>Automation</strong><small>Efficient repeatable workflows</small></div>
+            <div><span>✓</span><strong>Strategy</strong><small>Business-focused recommendations</small></div>
+          </div>
+          <div class="experience-badge">
+            <span class="globe">◎</span>
+            <p><strong>Global Analytics Perspective</strong><br><small>Building solutions for modern data-driven teams.</small></p>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" aria-label="Analytics dashboard illustration">
+          <div class="orb orb-one"></div>
+          <div class="orb orb-two"></div>
+          <div class="dashboard-card main-dashboard">
+            <div class="dash-top"><span></span><span></span><span></span></div>
+            <div class="chart-title"><strong>Performance Overview</strong><small>Last 6 months</small></div>
+            <svg viewBox="0 0 520 220" role="img" aria-label="Rising analytics line chart">
+              <defs>
+                <linearGradient id="area" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#5c4df4" stop-opacity="0.28"/>
+                  <stop offset="100%" stop-color="#5c4df4" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <g class="grid-lines">
+                <line x1="30" y1="35" x2="500" y2="35"/><line x1="30" y1="80" x2="500" y2="80"/><line x1="30" y1="125" x2="500" y2="125"/><line x1="30" y1="170" x2="500" y2="170"/>
+              </g>
+              <path d="M35 165 L105 135 L170 150 L235 96 L300 120 L365 68 L430 90 L495 42 L495 190 L35 190 Z" fill="url(#area)"/>
+              <polyline points="35,165 105,135 170,150 235,96 300,120 365,68 430,90 495,42" fill="none" stroke="#5147ef" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+              <g fill="#5147ef"><circle cx="35" cy="165" r="6"/><circle cx="105" cy="135" r="6"/><circle cx="170" cy="150" r="6"/><circle cx="235" cy="96" r="6"/><circle cx="300" cy="120" r="6"/><circle cx="365" cy="68" r="6"/><circle cx="430" cy="90" r="6"/><circle cx="495" cy="42" r="6"/></g>
+            </svg>
+            <div class="metric-row">
+              <div><small>Revenue</small><strong>+24.8%</strong></div>
+              <div><small>Conversion</small><strong>+18.2%</strong></div>
+              <div><small>Efficiency</small><strong>+31.5%</strong></div>
+            </div>
+          </div>
+          <div class="floating-card card-sql"><span>{ }</span><div><strong>SQL</strong><small>Analysis</small></div></div>
+          <div class="floating-card card-bi"><span>▥</span><div><strong>BI</strong><small>Dashboards</small></div></div>
+          <div class="floating-card card-auto"><span>⚙</span><div><strong>Automation</strong><small>Workflows</small></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft" id="about">
+      <div class="container split">
+        <div class="section-copy reveal">
+          <p class="eyebrow">ABOUT ME</p>
+          <h2>Analytics that connects data with business impact.</h2>
+          <p>I enjoy solving business problems with structured analysis, clear dashboards and automated reporting. My goal is to make data easier to understand, easier to trust and easier to use.</p>
+          <p>I’m continuously expanding my expertise across advanced SQL, data engineering, automation and modern analytics workflows.</p>
+        </div>
+        <div class="stats-grid reveal">
+          <div><strong>SQL</strong><span>Data exploration & analysis</span></div>
+          <div><strong>BI</strong><span>Dashboards & storytelling</span></div>
+          <div><strong>ETL</strong><span>Data preparation & pipelines</span></div>
+          <div><strong>Automation</strong><span>Repeatable reporting workflows</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">WHAT I DO</p>
+          <h2>End-to-End Analytics Capabilities</h2>
+          <p>From raw data to decision-ready insights.</p>
+        </div>
+        <div class="card-grid capabilities">
+          <article class="info-card reveal"><div class="icon">⌕</div><h3>Data Analysis</h3><ul><li>Exploratory analysis</li><li>KPI definition</li><li>Trend & variance analysis</li><li>Business recommendations</li></ul></article>
+          <article class="info-card reveal"><div class="icon">SQL</div><h3>SQL & Databases</h3><ul><li>Advanced SQL queries</li><li>Joins & CTEs</li><li>Window functions</li><li>Data validation</li></ul></article>
+          <article class="info-card reveal"><div class="icon">▥</div><h3>Dashboards</h3><ul><li>Power BI / Looker Studio</li><li>Executive reporting</li><li>KPI scorecards</li><li>Data storytelling</li></ul></article>
+          <article class="info-card reveal"><div class="icon">⚙</div><h3>Automation</h3><ul><li>Reporting automation</li><li>Workflow improvement</li><li>Data refresh processes</li><li>Efficiency tracking</li></ul></article>
+          <article class="info-card reveal"><div class="icon">↗</div><h3>Data Engineering</h3><ul><li>ETL concepts</li><li>Data pipelines</li><li>Data transformation</li><li>Analytics-ready datasets</li></ul></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft" id="projects">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">PORTFOLIO</p>
+          <h2>Selected Analytics Projects</h2>
+          <p>Practical projects that demonstrate how I approach real business questions.</p>
+        </div>
+        <div class="projects-grid">
+          <article class="project-card reveal">
+            <div class="project-visual p1"><span>Sales Dashboard</span><div class="mini-bars"><i></i><i></i><i></i><i></i><i></i></div></div>
+            <div class="project-body"><p class="tag">POWER BI • SQL</p><h3>Executive Sales Performance Dashboard</h3><p>Built an interactive view of revenue, targets, product mix and regional performance to surface growth opportunities.</p><a href="#contact">Case study coming soon →</a></div>
+          </article>
+          <article class="project-card reveal">
+            <div class="project-visual p2"><span>Customer Analytics</span><div class="donut"></div></div>
+            <div class="project-body"><p class="tag">SQL • SEGMENTATION</p><h3>Customer Segmentation Analysis</h3><p>Analyzed customer behavior to identify high-value groups, engagement patterns and retention opportunities.</p><a href="#contact">Case study coming soon →</a></div>
+          </article>
+          <article class="project-card reveal">
+            <div class="project-visual p3"><span>Reporting Automation</span><div class="flow"><i>Data</i><b>→</b><i>Transform</i><b>→</b><i>Report</i></div></div>
+            <div class="project-body"><p class="tag">AUTOMATION • ETL</p><h3>Automated Reporting Workflow</h3><p>Designed a repeatable reporting process that reduces manual preparation and improves consistency.</p><a href="#contact">Case study coming soon →</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">HOW I CAN HELP</p>
+          <h2>Analytics Support for Better Decisions</h2>
+        </div>
+        <div class="process-grid">
+          <div class="process-step reveal"><span>01</span><h3>Understand</h3><p>Clarify the business problem, stakeholders and success metrics.</p></div>
+          <div class="process-step reveal"><span>02</span><h3>Analyze</h3><p>Explore the data, identify patterns and validate assumptions.</p></div>
+          <div class="process-step reveal"><span>03</span><h3>Build</h3><p>Create dashboards, models or workflows tailored to the use case.</p></div>
+          <div class="process-step reveal"><span>04</span><h3>Improve</h3><p>Iterate, automate and make the solution easier to maintain.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section" id="contact">
+      <div class="container cta-wrap reveal">
+        <div><p class="eyebrow light">LET’S WORK TOGETHER</p><h2>Need help making your data more useful?</h2><p>I’m open to analytics projects, collaborations, consulting opportunities and conversations about data.</p></div>
+        <a class="btn btn-light" href="mailto:monika.verma568@gmail.com">Contact Me →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-wrap">
+      <div class="brand footer-brand"><span class="brand-mark">MV</span><span><strong>Monika Verma</strong><small>Data Analytics Portfolio</small></span></div>
+      <p>© <span id="year"></span> Monika Verma. Built with a focus on data, clarity and growth.</p>
+      <div class="footer-links"><a href="https://github.com/MONIKAVERMA14" target="_blank" rel="noopener">GitHub</a><a href="#home">Back to top ↑</a></div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
