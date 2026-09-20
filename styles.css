@@ -177,3 +177,26 @@
   .impact-flow i{display:none}
   .compact-services{grid-template-columns:1fr}
 }
+
+/* Fix Agentic Automation flow visibility on light service cards */
+.compact-services .dark-card .light-flow span{
+  background:#eef4f2;
+  color:var(--ink);
+  border:1px solid #dfe8e4;
+}
+.compact-services .dark-card .light-flow b{
+  color:#88a296;
+}
+.compact-services .automation-flow{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:8px;
+  width:100%;
+}
+.compact-services .automation-flow span{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:36px;
+}
