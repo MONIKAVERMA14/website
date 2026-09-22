@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="A visual framework for using AI in data analysis: plan first, define the desired output, write SQL, test, and validate the result." />
-  <title>AI Can Write SQL. Analysts Still Need to Think | Monika Verma</title>
+  <meta name="description" content="How data analysts can use AI to build faster, test and validate results, and spend more time on business context, insights and the final product." />
+  <link rel="canonical" href="https://monikaverma14.github.io/website/ai-sql-data-analysis.html" />
+  <title>AI and Data Analysts: A Human-in-the-Loop Workflow | Monika Verma</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260922-2" />
+  <link rel="stylesheet" href="styles.css?v=20260922-3" />
 </head>
 <body>
 <header class="site-header">
@@ -28,143 +29,61 @@
         <div class="article-hero-grid">
           <div>
             <p class="article-category">AI & DATA ANALYSIS</p>
-            <h1>AI can write SQL.<br><span>Analysts still need to think.</span></h1>
-            <p class="article-deck">The query is not the starting point. Good analysis starts with planning, defining the desired output, then writing, testing and validating the SQL.</p>
+            <h1>AI makes analysis faster.<br><span>Human judgment makes it useful.</span></h1>
+            <p class="article-deck">Partnering with AI gives analysts more time to understand the business, shape the final product and check whether the answer is trustworthy.</p>
             <div class="article-meta"><span>Monika Verma</span><span>22 September 2026</span><span>4 min read</span></div>
           </div>
-          <div class="article-hero-card">
-            <small>THE ANALYTICAL FLOW</small>
-            <div class="mini-flow"><span>Plan</span><i>→</i><span>Output</span><i>→</i><span>SQL</span><i>→</i><span>Test</span><i>→</i><span>Validate</span></div>
-            <strong>AI helps with the code.<br>The analyst owns the logic.</strong>
+          <div class="article-hero-card partnership-card">
+            <small>WHERE THE TIME GOES</small>
+            <div class="partnership-row"><b>AI helps accelerate</b><span>Draft queries · suggest tests · structure documentation</span></div>
+            <div class="partnership-arrow" aria-hidden="true">↓</div>
+            <div class="partnership-row emphasis"><b>Analysts spend more time on</b><span>Context · validation · interpretation · the end product</span></div>
           </div>
         </div>
       </div>
     </header>
 
     <div class="container article-wide article-body visual-body">
-      <section class="process-overview">
-        <div class="process-step"><b>01</b><strong>Planning</strong><span>What are we trying to answer?</span></div>
-        <i>→</i>
-        <div class="process-step"><b>02</b><strong>Desired Output</strong><span>What should the result look like?</span></div>
-        <i>→</i>
-        <div class="process-step"><b>03</b><strong>Query</strong><span>Use SQL to express the logic.</span></div>
-        <i>→</i>
-        <div class="process-step"><b>04</b><strong>Test</strong><span>Check rows, joins, totals and edge cases.</span></div>
-        <i>→</i>
-        <div class="process-step"><b>05</b><strong>Validate</strong><span>Does the result make business sense?</span></div>
+      <section class="intro-block">
+        <p class="article-category">THE PARTNERSHIP</p>
+        <h2>Faster execution creates room for better thinking.</h2>
+        <p>AI can help write SQL, explore approaches and draft repeatable checks. That efficiency matters most when analysts reinvest the saved time in understanding the use case, checking the data and preparing something people can actually use.</p>
       </section>
 
-      <section class="framework-card">
-        <div class="step-label">01 · PLANNING</div>
-        <div class="framework-grid">
-          <div>
-            <h2>Start with the question, not the SQL.</h2>
-            <p>Before asking AI to write code, define the problem in plain language. The analyst should know what decision the analysis needs to support.</p>
-          </div>
-          <div class="check-panel">
-            <span>Business question</span>
-            <span>Data grain</span>
-            <span>Source tables</span>
-            <span>Metrics</span>
-            <span>Filters</span>
-            <span>Edge cases</span>
-          </div>
+      <section class="pyramid-section" aria-labelledby="pyramid-heading">
+        <div class="pyramid-copy">
+          <p class="article-category">THE HUMAN-IN-THE-LOOP PYRAMID</p>
+          <h2 id="pyramid-heading">The closer you get to a decision, the more context matters.</h2>
+          <p>AI can support every layer. The analyst remains accountable for the meaning and impact of the work.</p>
+          <div class="pyramid-key"><span class="key-human"></span> Human-led <span class="key-shared"></span> AI-assisted, human-checked</div>
         </div>
-        <div class="framework-note">If you cannot explain the logic clearly without SQL, AI is being asked to guess the analysis.</div>
-      </section>
-
-      <section class="framework-card">
-        <div class="step-label">02 · DESIRED OUTPUT</div>
-        <div class="framework-grid">
-          <div>
-            <h2>Know what the answer should look like.</h2>
-            <p>Defining the output before writing the query makes testing easier. For example: monthly revenue by marketing channel for completed orders only.</p>
-          </div>
-          <div class="output-table-wrap">
-            <table class="output-table">
-              <thead><tr><th>Month</th><th>Channel</th><th>Revenue</th></tr></thead>
-              <tbody>
-                <tr><td>Jan 2026</td><td>Google Ads</td><td>15,000</td></tr>
-                <tr><td>Jan 2026</td><td>Social Media</td><td>9,500</td></tr>
-                <tr><td>Jan 2026</td><td>SEO</td><td>11,200</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div class="framework-note">If you do not know the expected shape of the answer, it is much harder to know whether the query is correct.</div>
-      </section>
-
-      <section class="framework-card">
-        <div class="step-label">03 · QUERY</div>
-        <div class="framework-grid">
-          <div>
-            <h2>Now let AI help write the SQL.</h2>
-            <p>Once the logic and output are clear, AI becomes useful as a drafting partner. It can generate syntax, explain joins, suggest functions and speed up iteration.</p>
-          </div>
-          <pre class="article-code compact-code"><code>SELECT
-    DATE_TRUNC('month', order_date) AS month,
-    marketing_channel,
-    SUM(revenue) AS total_revenue
-FROM orders
-WHERE order_status = 'completed'
-  AND order_date &gt;= '2026-01-01'
-GROUP BY 1, 2
-ORDER BY 1, 3 DESC;</code></pre>
-        </div>
-        <div class="framework-note">The query can be simple. The thinking behind the query is the valuable part.</div>
-      </section>
-
-      <section class="framework-card">
-        <div class="step-label">04 · TEST</div>
-        <div class="framework-grid">
-          <div>
-            <h2>A query can run successfully and still be wrong.</h2>
-            <p>Testing is where analysts protect the quality of the result. Do not treat the first AI-generated query as final.</p>
-          </div>
-          <div class="test-grid">
-            <span><b>Rows</b><small>Did the row count change unexpectedly?</small></span>
-            <span><b>Joins</b><small>Did a join duplicate records?</small></span>
-            <span><b>Nulls</b><small>Are missing values being dropped?</small></span>
-            <span><b>Totals</b><small>Do totals match a trusted source?</small></span>
-          </div>
+        <div class="pyramid" role="img" aria-label="Human-in-the-loop pyramid, from bottom to top: build and document with AI assistance; test and validate with human checks; interpret using business and historical context; decide and communicate business impact under human leadership.">
+          <div class="pyramid-tier tier-top"><strong>Decide & communicate</strong><small>What changes for the business?</small></div>
+          <div class="pyramid-tier tier-second"><strong>Interpret</strong><small>Use-case and historical context</small></div>
+          <div class="pyramid-tier tier-third"><strong>Test & validate</strong><small>AI suggests checks; people verify results</small></div>
+          <div class="pyramid-tier tier-base"><strong>Build & document</strong><small>AI speeds up SQL, drafts and repeatable work</small></div>
         </div>
       </section>
 
-      <section class="framework-card">
-        <div class="step-label">05 · VALIDATE</div>
-        <div class="framework-grid">
-          <div>
-            <h2>SQL gives the number. Analysis gives the meaning.</h2>
-            <p>If one channel is down 25%, the job is not finished. The analyst still needs to ask why and whether the result makes sense in context.</p>
-          </div>
-          <div class="question-stack">
-            <span>Was traffic lower?</span>
-            <span>Did conversion drop?</span>
-            <span>Was tracking broken?</span>
-            <span>Did campaign mix change?</span>
-            <span>Is seasonality involved?</span>
-          </div>
+      <section class="workflow-section">
+        <p class="article-category">A PRACTICAL WORKFLOW</p>
+        <h2>Use AI throughout the work, with a clear owner for each decision.</h2>
+        <div class="workflow-grid">
+          <div class="workflow-card"><span>01 · HUMAN LEADS</span><h3>Frame the business question</h3><p>Define the use case, the decision it supports, historical patterns and the expected output. Explain what a useful result would change.</p></div>
+          <div class="workflow-card"><span>02 · AI ASSISTS</span><h3>Build a first version</h3><p>Ask AI to draft SQL, outline the analysis or propose a dashboard layout. Give it the metric definitions and data constraints.</p></div>
+          <div class="workflow-card"><span>03 · AI + HUMAN</span><h3>Set up checks</h3><p>Use AI to suggest tests for joins, missing values, duplicate rows, totals and edge cases. Run the checks against trusted sources and investigate failures.</p></div>
+          <div class="workflow-card"><span>04 · HUMAN LEADS</span><h3>Interpret and deliver</h3><p>Compare results with historical performance and business reality. Refine the story and format for the people who will use it.</p></div>
+          <div class="workflow-card workflow-card-wide"><span>05 · DOCUMENT AFTER VALIDATION</span><h3>Make the work reusable</h3><p>Once the logic and output match the plan, use AI to draft clear documentation: assumptions, definitions, tests performed, limitations and how to refresh the analysis. Review it before sharing.</p></div>
         </div>
-        <div class="framework-note">Understanding the output is now more valuable because AI is making the code itself easier to produce.</div>
       </section>
 
       <section class="article-ending visual-ending">
         <p class="article-category">THE TAKEAWAY</p>
-        <h2>Let AI accelerate the code — not replace the analysis.</h2>
-        <div class="takeaway-grid">
-          <span><b>Human</b>Planning</span>
-          <span><b>Human</b>Desired output</span>
-          <span><b>AI + Human</b>SQL query</span>
-          <span><b>Human</b>Testing</span>
-          <span><b>Human</b>Validation & insight</span>
-        </div>
-        <p>AI is a powerful assistant for SQL. But trustworthy analysis still depends on the analyst owning the logic, the checks and the interpretation.</p>
+        <h2>AI can multiply an analyst’s capacity. Business understanding gives that capacity direction.</h2>
+        <p>The strongest analysts know the history behind a metric, understand the use case and can explain how the result will affect a decision. AI helps them move faster; human judgment keeps the final product relevant and reliable.</p>
       </section>
 
-      <div class="article-author">
-        <div><strong>Monika Verma</strong><span>Data & Analytics Consultant</span></div>
-        <a href="index.html#contact">Work with me →</a>
-      </div>
+      <div class="article-author"><div><strong>Monika Verma</strong><span>Data & Analytics Consultant</span></div><a href="index.html#contact">Work with me →</a></div>
     </div>
   </article>
 </main>
