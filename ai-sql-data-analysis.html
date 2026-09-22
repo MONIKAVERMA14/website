@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260922-5" />
+  <link rel="stylesheet" href="styles.css?v=20260922-6" />
 </head>
 <body>
 <header class="site-header">
@@ -72,26 +72,47 @@
         <div class="comparison-grid">
           <div class="comparison-lane manual-lane">
             <span class="lane-label">TRADITIONAL WORKFLOW</span>
-            <h3>The analyst builds each part</h3>
-            <div class="lane-step"><b>01</b><span>Understand the request and inspect the tables</span></div>
-            <div class="lane-step"><b>02</b><span>Write SQL and debug the joins and filters</span></div>
-            <div class="lane-step"><b>03</b><span>Write checks, interpret results and document</span></div>
-            <p>Much of the time goes into producing and testing the first version.</p>
+            <h3>One analyst, every production step</h3>
+            <div class="character-stage manual-stage" aria-hidden="true">
+              <svg class="worker-illustration" viewBox="0 0 220 135" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="48" cy="51" r="16" fill="#d9aa82"/><path d="M32 48c0-23 34-26 34 0-9-6-22-6-34 0Z" fill="#263c34"/>
+                <path d="M22 95c1-25 14-31 27-31s28 7 29 31" fill="#528c77"/><path class="typing-hand" d="M65 82l26 17" stroke="#d9aa82" stroke-width="10" stroke-linecap="round"/>
+                <rect x="91" y="57" width="89" height="57" rx="6" fill="#193d32"/><rect x="97" y="63" width="77" height="43" rx="2" fill="#e0efcf"/>
+                <path d="M101 72h28m-28 9h46m-46 9h33" stroke="#579d7c" stroke-width="3" stroke-linecap="round"/><path class="typing-cursor" d="M136 90h3" stroke="#193d32" stroke-width="3"/>
+                <path d="M86 115h101l8 8H77Z" fill="#456b5d"/>
+              </svg>
+              <div class="time-badge"><b>↻</b><span>Manual build + debug cycle</span></div>
+            </div>
+            <ol class="manual-steps">
+              <li>Work with stakeholders</li><li>Understand the business use case and end goal</li><li>Inspect tables and data availability</li><li>Write and debug the SQL</li><li>Validate results and explain findings</li><li>Document and publish</li>
+            </ol>
+            <p>Careful work, but writing and debugging can take time away from interpreting the result.</p>
           </div>
           <div class="comparison-lane assisted-lane">
-            <span class="lane-label">AI-ASSISTED WORKFLOW</span>
-            <h3>The analyst gives AI the right context</h3>
-            <div class="knowledge-packet">
-              <strong>Knowledge passed to AI <span aria-hidden="true">→</span></strong>
-              <div class="knowledge-tags"><span>Business rule: completed orders</span><span>Tables: orders + channel mapping</span><span>Data availability: refunds missing</span><span>Output: month × channel</span></div>
+            <span class="lane-label">AI ERA · HUMAN IN THE LOOP</span>
+            <h3>Human direction. AI execution. Human review.</h3>
+            <div class="character-stage ai-stage" aria-hidden="true">
+              <div class="mini-person"><span class="person-head"></span><span class="person-body"></span><small>Analyst</small></div>
+              <div class="signal-track"><span>→</span></div>
+              <div class="mini-robot"><span class="robot-antenna"></span><span class="robot-face"><i></i><i></i></span><small>SQL AI</small></div>
+              <div class="signal-track"><span>→</span></div>
+              <div class="mini-robot validate-robot"><span class="robot-antenna"></span><span class="robot-face"><i></i><i></i></span><small>Test AI</small></div>
             </div>
-            <div class="handoff-arrow" aria-hidden="true"><span>↓</span></div>
-            <div class="ai-output"><b>AI drafts</b><span>SQL + suggested checks + a documentation outline</span></div>
-            <div class="handoff-arrow" aria-hidden="true"><span>↓</span></div>
-            <div class="human-output"><b>Analyst verifies & explains</b><span>Compare totals, investigate anomalies and explain what the numbers mean. Label the result as gross completed-order revenue because refunds are unavailable.</span></div>
+            <div class="knowledge-packet">
+              <strong>Human transfers the knowledge <span aria-hidden="true">→</span></strong>
+              <div class="knowledge-tags"><span>Goal: channel revenue</span><span>Rule: completed orders</span><span>Tables: orders + channel mapping</span><span>Limit: refunds unavailable</span></div>
+            </div>
+            <div class="ai-review-flow">
+              <div class="flow-item"><b>1 · Human frames</b><span>Talk to stakeholders; define the question, history, impact and expected output.</span></div>
+              <div class="flow-item"><b>2 · SQL AI drafts</b><span>Generate a query from the supplied rules and table information.</span></div>
+              <div class="review-gate">HUMAN REVIEW · Are the joins, filters and definitions right?</div>
+              <div class="flow-item"><b>3 · Test AI checks</b><span>Suggest row-count, duplicate, missing-value and reconciliation checks.</span></div>
+              <div class="review-gate">HUMAN REVIEW · Run checks, investigate failures and compare trusted totals.</div>
+              <div class="flow-item"><b>4 · Human explains & publishes</b><span>Interpret the result, document limitations and approve the final product.</span></div>
+            </div>
           </div>
         </div>
-        <p class="example-caption">Illustrative example: AI can draft the query and test plan; only the analyst can confirm that the business rules, available data and final interpretation fit the decision.</p>
+        <p class="example-caption">Illustrative example: because refund data is unavailable, the analyst labels the output as completed-order revenue, not net revenue. AI can help draft and check the work; the analyst remains responsible for what is published.</p>
       </section>
 
       <section class="workflow-section">
