@@ -3,52 +3,65 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Insights from Monika Verma on data engineering, analytics, marketing analytics and AI automation." />
+  <meta name="description" content="Practical insights from Monika Verma on analytics, SQL, marketing analytics, data engineering and AI automation." />
   <title>Insights | Monika Verma</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20260922-1" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="index.html"><span class="brand-mark">MV</span><span><strong>Monika Verma</strong><small>Analytics & Data Consulting</small></span></a>
-      <nav class="nav-links"><a href="index.html#services">Services</a><a href="index.html#engineering">Data Engineering</a><a href="blog.html">Blog</a></nav>
-      <a class="btn btn-primary nav-cta" href="mailto:analytics.digitalimpact@gmail.com?subject=Consulting%20Enquiry">Start a Project →</a>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="index.html"><span class="brand-dot"></span><span><strong>Monika Verma</strong><small>Data & Analytics Consultant</small></span></a>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav class="nav-links"><a href="index.html#services">Services</a><a href="index.html#projects">Projects</a><a href="blog.html">Insights</a><a href="index.html#about">About</a></nav>
+    <a class="btn btn-light nav-cta" href="mailto:analytics.digitalimpact@gmail.com?subject=Consulting%20Enquiry">Let’s talk ↗</a>
+  </div>
+</header>
+
+<main>
+  <section class="blog-hero">
+    <div class="container">
+      <p class="eyebrow light">INSIGHTS</p>
+      <h1>Practical ideas. No buzzword overload.</h1>
+      <p class="hero-text">Notes on analytics, marketing measurement, data foundations and using AI without losing the thinking behind the work.</p>
     </div>
-  </header>
+  </section>
 
-  <main>
-    <section class="blog-hero">
-      <div class="container">
-        <p class="eyebrow">INSIGHTS</p>
-        <h1>Data, analytics & AI — without the noise.</h1>
-        <p class="hero-text">A growing library of practical notes on building better data systems, making analytics useful and applying AI where it actually helps.</p>
-      </div>
-    </section>
-
-    <section class="section white">
-      <div class="container">
-        <div class="blog-grid">
-          <article class="blog-card"><span>DATA ENGINEERING</span><h2>Why dashboards fail when the pipeline is weak</h2><p>Coming soon — a practical look at data ingestion, transformation and reliability.</p></article>
-          <article class="blog-card"><span>ANALYTICS</span><h2>What should a business automate first?</h2><p>Coming soon — how to find repetitive reporting and analysis tasks worth automating.</p></article>
-          <article class="blog-card"><span>AI</span><h2>Where AI fits in a modern analytics workflow</h2><p>Coming soon — a simple framework for using AI without losing control of quality.</p></article>
-          <article class="blog-card"><span>MARKETING ANALYTICS</span><h2>From campaign metrics to business outcomes</h2><p>Coming soon — connecting spend, funnels, conversion and revenue.</p></article>
-          <article class="blog-card"><span>CAREERS</span><h2>Data analyst, marketing analyst or analytics engineer?</h2><p>Coming soon — a clearer way to think about overlapping analytics roles.</p></article>
-          <article class="blog-card"><span>DATA STRATEGY</span><h2>When spreadsheets stop being enough</h2><p>Coming soon — signs that a team needs a more structured analytics stack.</p></article>
+  <section class="section white">
+    <div class="container">
+      <a class="blog-featured" href="ai-sql-data-analysis.html">
+        <div>
+          <span>AI & DATA ANALYSIS · 22 SEP 2026</span>
+          <h2>AI can write SQL. The real skill is knowing what to ask — and what the output means.</h2>
+          <p>AI can speed up SQL dramatically. But planning the logic, testing the result and interpreting the output are now more important than ever.</p>
+          <strong>Read the article →</strong>
         </div>
-      </div>
-    </section>
-  </main>
+        <div class="featured-visual">
+          <div class="sql-window">
+            <i>SELECT</i>
+            <b>business_question</b>
+            <i>FROM</i>
+            <b>trusted_data</b>
+            <i>WHERE</i>
+            <b>logic_is_tested = TRUE;</b>
+          </div>
+        </div>
+      </a>
 
-  <footer>
-    <div class="container footer-wrap">
-      <div class="brand"><span class="brand-mark">MV</span><span><strong>Monika Verma</strong><small>Analytics & Data Consulting</small></span></div>
-      <p>© <span id="year"></span> Monika Verma</p>
-      <div class="footer-links"><a href="index.html">Home</a><a href="mailto:analytics.digitalimpact@gmail.com">Email</a><a href="https://www.linkedin.com/in/monika-verma-3394065a/" target="_blank" rel="noopener">LinkedIn</a></div>
+      <div class="blog-grid blog-grid-spaced">
+        <article class="blog-card"><span>DATA ENGINEERING</span><h2>Why dashboards fail when the pipeline is weak</h2><p>Coming soon — a practical look at ingestion, transformation and reliability.</p></article>
+        <article class="blog-card"><span>MARKETING ANALYTICS</span><h2>From campaign metrics to business outcomes</h2><p>Coming soon — connecting spend, user journeys, conversion and revenue.</p></article>
+        <article class="blog-card"><span>AI & AUTOMATION</span><h2>What should a business automate first?</h2><p>Coming soon — where AI automation creates real value and where it does not.</p></article>
+        <article class="blog-card"><span>CAREERS</span><h2>Data analyst, marketing analyst or analytics engineer?</h2><p>Coming soon — a clearer way to think about overlapping analytics roles.</p></article>
+        <article class="blog-card"><span>DATA STRATEGY</span><h2>When spreadsheets stop being enough</h2><p>Coming soon — signs that a team needs a more structured analytics stack.</p></article>
+      </div>
     </div>
-  </footer>
-  <script src="script.js"></script>
+  </section>
+</main>
+
+<footer><div class="container footer-wrap"><div class="brand"><span class="brand-dot"></span><span><strong>Monika Verma</strong><small>Data & Analytics Consultant</small></span></div><p>© <span id="year"></span> Monika Verma</p><div class="footer-links"><a href="index.html">Home</a><a href="mailto:analytics.digitalimpact@gmail.com">Email</a><a href="https://www.linkedin.com/in/monika-verma-3394065a/" target="_blank" rel="noopener">LinkedIn</a></div></div></footer>
+<script src="script.js"></script>
 </body>
 </html>
