@@ -256,3 +256,6 @@
   .article-body{font-size:1rem}
   .article-author{align-items:flex-start;flex-direction:column}
 }
+
+.insight-link{display:block;text-decoration:none;color:var(--ink)}
+.insight-link:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
