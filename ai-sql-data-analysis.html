@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AI can help write SQL faster, but strong data analysis still depends on planning, logic, validation and understanding the output." />
+  <title>AI Can Write SQL. Analysis Still Needs Human Thinking | Monika Verma</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20260922-1" />
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="index.html"><span class="brand-dot"></span><span><strong>Monika Verma</strong><small>Data & Analytics Consultant</small></span></a>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav class="nav-links"><a href="index.html#services">Services</a><a href="index.html#projects">Projects</a><a href="blog.html">Insights</a><a href="index.html#about">About</a></nav>
+    <a class="btn btn-light nav-cta" href="mailto:analytics.digitalimpact@gmail.com?subject=Consulting%20Enquiry">Let’s talk ↗</a>
+  </div>
+</header>
+
+<main>
+  <article class="article-page">
+    <header class="article-hero">
+      <div class="container article-narrow">
+        <a class="article-back" href="blog.html">← Back to Insights</a>
+        <p class="article-category">AI & DATA ANALYSIS</p>
+        <h1>AI can write SQL. The real skill is knowing what to ask — and what the output means.</h1>
+        <p class="article-deck">AI is making SQL easier to write. But writing a query is only one small part of data analysis. Planning the logic, testing the result and understanding what the numbers actually mean are becoming even more important.</p>
+        <div class="article-meta"><span>Monika Verma</span><span>22 September 2026</span><span>6 min read</span></div>
+      </div>
+    </header>
+
+    <div class="container article-narrow article-body">
+      <p>One of the most useful things AI can do for a data analyst today is help write SQL. You can describe what you need in plain language and get a query in seconds. That is valuable — especially when you are working with unfamiliar syntax, complex joins or repetitive transformations.</p>
+
+      <p>But there is an important distinction: <strong>AI can help write the SQL. It cannot replace the analytical thinking behind the SQL.</strong></p>
+
+      <h2>SQL can be simple. The analysis is not.</h2>
+      <p>Imagine the business asks: <em>“Which marketing channel generated the most valuable customers last quarter?”</em></p>
+
+      <p>A query that groups customers by channel and sums revenue may be only a few lines long. But before writing those lines, an analyst has to make several decisions. What counts as a customer? Which date defines the quarter? Are we measuring first-touch channel, last-touch channel or the channel associated with the transaction? Should refunds be removed? Are duplicate orders possible?</p>
+
+      <p>Those decisions are the analysis. The SQL is simply how we express them.</p>
+
+      <div class="article-callout">
+        <strong>A useful rule:</strong>
+        <p>Do not ask AI to “write the query” until you can explain, in simple language, exactly what the query should calculate.</p>
+      </div>
+
+      <h2>Plan the logic before asking AI for code</h2>
+      <p>Before opening an AI tool, I find it useful to write down the analytical plan in plain English:</p>
+
+      <ul>
+        <li><strong>Business question:</strong> What decision are we trying to support?</li>
+        <li><strong>Data grain:</strong> Is one row a user, order, session, campaign or event?</li>
+        <li><strong>Sources:</strong> Which tables or systems contain the required data?</li>
+        <li><strong>Relationships:</strong> How should those sources be joined?</li>
+        <li><strong>Metrics:</strong> What exactly are we calculating?</li>
+        <li><strong>Filters:</strong> Which dates, markets, products or customer groups are included?</li>
+        <li><strong>Edge cases:</strong> What about nulls, duplicates, cancellations or missing tracking?</li>
+      </ul>
+
+      <p>Once this is clear, AI becomes much more useful because you are giving it a specification rather than asking it to guess your business logic.</p>
+
+      <h2>Use AI as a SQL drafting partner</h2>
+      <p>For example, suppose the requirement is: calculate monthly revenue by marketing channel, exclude cancelled orders and only include completed orders from 2026.</p>
+
+      <pre class="article-code"><code>SELECT
+    DATE_TRUNC('month', order_date) AS month,
+    marketing_channel,
+    SUM(revenue) AS total_revenue
+FROM orders
+WHERE order_status = 'completed'
+  AND order_date &gt;= '2026-01-01'
+GROUP BY 1, 2
+ORDER BY 1, 3 DESC;</code></pre>
+
+      <p>AI can generate something like this quickly. It can also explain the syntax, convert it between SQL dialects, suggest a window function or help simplify a complicated query.</p>
+
+      <p>That saves time. But a query being syntactically correct does not mean the analysis is correct.</p>
+
+      <h2>The most important step: test the output</h2>
+      <p>When AI generates SQL, I would never treat the first result as the final answer. The query needs to be tested like any other piece of analytical work.</p>
+
+      <p>Start small. Look at sample records. Check row counts before and after a join. Look for unexpected duplicates. Compare totals with an existing report. Check whether null values are being silently excluded. Pick a few customers or orders and manually verify that they appear in the correct segment.</p>
+
+      <p>A particularly common problem is a join that technically works but multiplies records. The query runs successfully, the dashboard looks polished — and the revenue is wrong.</p>
+
+      <p>AI may not know that happened unless you know what to test.</p>
+
+      <h2>Understanding the output is now the differentiator</h2>
+      <p>The more AI helps us write code, the more valuable interpretation becomes.</p>
+
+      <p>If revenue from one channel falls 25%, the analytical job is not finished when SQL returns <strong>-25%</strong>. We still need to ask why. Did traffic decline? Did conversion drop? Was tracking broken? Did the product mix change? Was one campaign paused? Is the comparison affected by seasonality?</p>
+
+      <p>This is where domain knowledge, curiosity and business context matter. A good analyst does not just retrieve a number. They understand the chain of logic behind it and know which follow-up questions to ask.</p>
+
+      <h2>What changes for data analysts in the AI era?</h2>
+      <p>I do not think the answer is to compete with AI on who can type SQL faster. The better opportunity is to become stronger at the parts AI cannot reliably own on its own: framing the problem, understanding data structure, defining the right metric, validating the logic and communicating what the result means.</p>
+
+      <p>SQL still matters. Advanced SQL still matters. Python, BI tools and data engineering still matter. But the value is increasingly in <strong>how we use those tools to reason about a business problem</strong>.</p>
+
+      <div class="article-ending">
+        <p class="article-category">THE TAKEAWAY</p>
+        <h2>Let AI accelerate the code — not replace the thinking.</h2>
+        <p>Use AI to draft, explain, debug and improve SQL. But own the plan, the logic, the testing and the interpretation. That is what turns a simple query into trustworthy data analysis.</p>
+      </div>
+
+      <div class="article-author">
+        <div><strong>Monika Verma</strong><span>Data & Analytics Consultant</span></div>
+        <a href="index.html#contact">Work with me →</a>
+      </div>
+    </div>
+  </article>
+</main>
+
+<footer><div class="container footer-wrap"><div class="brand"><span class="brand-dot"></span><span><strong>Monika Verma</strong><small>Data & Analytics Consultant</small></span></div><p>© <span id="year"></span> Monika Verma</p><div class="footer-links"><a href="blog.html">Insights</a><a href="mailto:analytics.digitalimpact@gmail.com">Email</a><a href="https://www.linkedin.com/in/monika-verma-3394065a/" target="_blank" rel="noopener">LinkedIn</a></div></div></footer>
+<script src="script.js"></script>
+</body>
+</html>
