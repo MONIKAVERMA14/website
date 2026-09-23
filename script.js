@@ -28,3 +28,25 @@ if(careerPopup){
     careerPopup.setAttribute('aria-hidden','true');
   });
 }
+
+const homeConsultPopup=document.querySelector('[data-home-consult-popup]');
+if(homeConsultPopup){
+  const closeHomePopup=homeConsultPopup.querySelector('.home-popup-close');
+  let homePopupShown=false;
+  const showHomePopup=()=>{
+    const scrollable=document.documentElement.scrollHeight-window.innerHeight;
+    const progress=scrollable>0?window.scrollY/scrollable:0;
+    if(!homePopupShown&&progress>=.38){
+      homePopupShown=true;
+      homeConsultPopup.classList.add('is-visible');
+      homeConsultPopup.setAttribute('aria-hidden','false');
+      window.removeEventListener('scroll',showHomePopup);
+    }
+  };
+  window.addEventListener('scroll',showHomePopup,{passive:true});
+  showHomePopup();
+  closeHomePopup.addEventListener('click',()=>{
+    homeConsultPopup.classList.remove('is-visible');
+    homeConsultPopup.setAttribute('aria-hidden','true');
+  });
+}
