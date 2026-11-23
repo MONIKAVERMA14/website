@@ -613,3 +613,50 @@
 @media(max-width:900px){.digital-hero-grid,.career-example,.ga-section,.decision-loop-section{grid-template-columns:1fr}.analytics-journey{grid-template-columns:1fr}.journey-arrow{height:35px;transform:rotate(90deg)}.tool-landscape{grid-template-columns:1fr}.tool-group{min-height:0}.career-example{padding:34px}.decision-loop-section{padding:34px}}
 @media(max-width:600px){.digital-hero{padding:50px 0}.traffic-visual{min-height:350px;padding:20px}.traffic-sources{grid-template-columns:1fr 1fr}.digital-body>section{margin-bottom:65px}.career-example,.decision-loop-section{padding:25px}.ga-question-grid{grid-template-columns:1fr}.ga-question-grid>div{min-height:130px}.decision-loop{align-items:stretch;flex-direction:column}.decision-loop i{transform:rotate(90deg);text-align:center}}
 @media(prefers-reduced-motion:reduce){.traffic-sources span,.traffic-lines i,.mini-browser>span,.journey-arrow em,.example-funnel>i,.ga-question-grid>div,.tool-group b,.decision-loop span{animation:none}}
+
+
+/* Analytics consent */
+.analytics-consent{
+  position:fixed;
+  z-index:1200;
+  left:50%;
+  bottom:22px;
+  transform:translateX(-50%);
+  width:min(920px,calc(100vw - 32px));
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+  padding:20px 22px;
+  border:1px solid rgba(18,56,47,.14);
+  border-radius:20px;
+  background:#fffdf8;
+  box-shadow:0 22px 60px rgba(13,47,40,.22);
+}
+.analytics-consent-copy{max-width:610px}
+.analytics-consent-copy strong{display:block;color:#102f28;font:800 1rem Manrope,sans-serif}
+.analytics-consent-copy p{margin:6px 0 0;color:#526b62;font-size:.82rem;line-height:1.55}
+.analytics-consent-actions{display:flex;gap:10px;flex:0 0 auto}
+.analytics-consent-actions button,.cookie-settings-link{
+  font:700 .76rem "DM Sans",sans-serif;
+  cursor:pointer;
+}
+.analytics-consent-actions button{
+  padding:11px 14px;
+  border-radius:999px;
+  border:1px solid #cfd9d4;
+}
+.analytics-reject{background:#fff;color:#24463a}
+.analytics-accept{background:#102f28!important;border-color:#102f28!important;color:#fff}
+.cookie-settings-link{
+  padding:0;
+  border:0;
+  background:none;
+  color:#d7e2dd;
+}
+.cookie-settings-link:hover{color:var(--lime)}
+@media(max-width:700px){
+  .analytics-consent{align-items:stretch;flex-direction:column;bottom:14px;padding:18px}
+  .analytics-consent-actions{width:100%}
+  .analytics-consent-actions button{flex:1}
+}
